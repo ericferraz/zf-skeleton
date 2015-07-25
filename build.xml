@@ -2,7 +2,7 @@
     <property name="basedir" value="${project.basedir}" />
     <property name="source" value="${basedir}/module" />
     <property name="bindir" value="${basedir}/vendor/bin/" />
-    <property name="testdir" value="${basedir}/vendor/bin/" />
+    <property name="testdir" value="${basedir}/test/" />
     <php expression="include('vendor/autoload.php')"/>
     <!-- # of threads to execute parallel tasks -->
     <property name="threads" value="4"/>
@@ -71,7 +71,7 @@
     </target>
 
     <target name="phpcs" description="Generate checkstyle.xml using PHP_CodeSniffer">
-        <exec logoutput="true" command="${bindir}phpcs --report=checkstyle --report-file=${basedir}/build/logs/checkstyle.xml --standard=PSR-2 ${source}" />
+        <exec logoutput="true" command="${bindir}phpcs --report=checkstyle --report-file=${basedir}/build/logs/checkstyle.xml --standard=PSR2 ${source}" />
     </target>
 
     <target name="phpdoc" description="Generate API documentation using PHPDocumentor">
