@@ -21,7 +21,7 @@
     </target>
 
     <target name="phpunit" description="Run unit tests using PHPUnit and generates junit.xml and clover.xml">
-        <exec logoutput="true" command="${bindir}phpunit --configuration=${testdir}phpunit.xml" />
+        <exec logoutput="true" command="${bindir}phpunit --configuration=${testdir}phpunit.xml --log-junit=${basedir}/build/logs/junit.xml --coverage-crap4j=${basedir}/build/logs/crap4j.xml --coverage-clover=${basedir}/build/logs/clover.xml" />
     </target>
 
     <target name="run_parallel_tasks">
