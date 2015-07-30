@@ -4,14 +4,10 @@
         colors="true"
         stopOnFailure="false"
         syntaxCheck="true"
-        strict="true"
-        timeoutForSmallTests="300"
-        timeoutForMediumTests="600"
-        timeoutForLargeTests="1200"
         >
     <testsuites>
-        <testsuite name="Slot Purchase Frontend APP Test">
-            <directory>./</directory>
+        <testsuite name="Application test suite">
+            <directory>./module/Application/src</directory>
         </testsuite>
     </testsuites>
     <filter>

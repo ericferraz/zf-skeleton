@@ -1,25 +1,29 @@
 {
-  "name": "zendframework/skeleton-application",
+  "name": "zendframework/zf2-skeleton",
   "description": "Skeleton Application for ZF2",
   "license": "BSD-3-Clause",
   "keywords": [
     "framework",
-    "zf2"
+    "zf2",
+    "qengine"
   ],
   "homepage": "http://framework.zend.com/",
   "require": {
     "php": ">=5.5",
-    "zendframework/zendframework": "~2.5"
+    "zendframework/zendframework": "~2.5",
+    "jakubigla/qengine-base": "~0.0",
+    "jakubigla/qengine-locale": "~0.0"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "2.3.3",
-    "phpmd/phpmd": "2.2.3",
-    "sebastian/phpcpd": "2.0.2",
-    "pdepend/pdepend": "2.1.0",
-    "phploc/phploc": "2.1.3",
-    "phpunit/phpunit": "4.7.7",
-    "theseer/phpdox": "0.8.1.1",
-    "mayflower/php-codebrowser": "1.1.1",
-    "phpdocumentor/phpdocumentor": "v2.8.4"
+    "squizlabs/php_codesniffer": "~2.3",
+    "phpmd/phpmd": "~2.2",
+    "sebastian/phpcpd": "~2.0",
+    "pdepend/pdepend": "~2.1",
+    "phploc/phploc": "~2.1",
+    "phpunit/phpunit": "~4.7",
+    "mayflower/php-codebrowser": "~1.1",
+    "phpdocumentor/phpdocumentor": "~2.8",
+    "se/selenium-server-standalone": "v2.46.0+p1",
+    "zendframework/zend-developer-tools": "dev-master"
   }
 }
