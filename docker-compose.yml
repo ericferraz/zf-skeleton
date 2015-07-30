@@ -1,0 +1,28 @@
+mysql:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: password
+    MYSQL_DATABASE: application
+    MYSQL_USER: application
+    MYSQL_PASSWORD: password
+  tty: true
+
+jenkins:
+  image: jakubigla/jenkins-php
+  links:
+     - mysql
+  tty: true
+
+apachephp:
+  image: jakubigla/apache-php-dev
+  volumes:
+   - ~/Projects/zf2-skeleton:/var/www/application
+  links:
+   - mysql
+  ports:
+   - "80:8080"
+  environment:
+    APPLICATION_NAME: "application"
+    APPLICATION_HOSTNAME: "application.dev"
+    APPLICATION_ENV: development
+  tty: true
