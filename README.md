@@ -42,7 +42,7 @@ If you don't have access to curl, then install Composer into your project as per
 
 Build script
 ----------------
-Tu run build script, you have to first install [Phing](https://www.phing.info). Then in your project root directory run:
+Tu run build script, first you have to install [Phing](https://www.phing.info). Then in your project root directory run:
 ```shell
 phing 
 ```
