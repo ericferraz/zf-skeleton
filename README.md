@@ -5,6 +5,11 @@ Introduction
 ------------
 This is my own ZF2 skeleton application using the ZF2 MVC layer and module systems. Purpose of this is to provide a starting point of building simple, complex and enterprise applications. This skeleton comes with [Phing](https://www.phing.info) build script that can be used in Continous Integration tools like Jenkins or Travis.
 
+### QEngine modules
+Below are modules that support building applications in a "professional" way:
+* [qengine-base](https://github.com/jakubigla/qengine-base) - very early stage
+* [qengine-locale](https://github.com/jakubigla/qengine-locale)
+
 Installation using Composer
 ---------------------------
 
@@ -34,12 +39,27 @@ If you don't have composer installed globally then another way to create a new Z
 
 If you don't have access to curl, then install Composer into your project as per the [documentation](https://getcomposer.org/doc/00-intro.md).
 
+
+Build script
+----------------
+Tu run build script, you have to first install [Phing](https://www.phing.info). Then in your project root directory run:
+```shell
+phing 
+```
+
+What this script is doing:
+* Install composer dependecies
+* Check for PHP syntax errors in your source files
+* Run unit tests
+* Analise project for quality assurance (pdepend, phpmd, phpcpd, phpcs, phpdoc, phploc, phpcb)
+
+
 Web server setup
 ----------------
 
 ### Docker containers
 
-This skeleton comes with basic [script](docker-compose.yml), that is used by [docker-compose](https://docs.docker.com/compose/), to create a local and powerful development infrastructure. By default there is only one container enabled - [Apache 2.4, PHP 5.6 (FastCGI)](https://hub.docker.com/u/jakubigla/apache-php-dev), however this script comes with two others: MySQL and Jenkins containers. 
+This skeleton comes with basic [script](docker-compose.yml), that is used by [docker-compose](https://docs.docker.com/compose/), to create a local and powerful development infrastructure. By default there is only one container enabled - [Apache 2.4, PHP 5.6 (FastCGI)](https://hub.docker.com/u/jakubigla/apache-php-dev), however this script comes with two others: [MySQL](https://registry.hub.docker.com/_/mysql/) and [Jenkins](https://registry.hub.docker.com/u/jakubigla/jenkins-php/) containers. 
 
 I assume you are familiar with Docker and have already installed it (and boot2docker for OSX or Windows) together with Docker orchestration tool: docker-compose. Edit [script](docker-compose.yml) file to meet your requirments (don't forget about data volumes). Add valid entry to your ```/etc/hosts``` file (If you're on OSX or Windows, you can retrieve your VM IP by running: ```shell boot2dock ip```) Now you are ready to run:
 
