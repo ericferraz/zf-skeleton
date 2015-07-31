@@ -1,11 +1,9 @@
-ZendSkeletonApplication
+My Perfect ZF2 Skeleton
 =======================
 
 Introduction
 ------------
-This is a simple, skeleton application using the ZF2 MVC layer and module
-systems. This application is meant to be used as a starting place for those
-looking to get their feet wet with ZF2.
+This is my own ZF2 skeleton application using the ZF2 MVC layer and module systems. Purpose of this is to provide a starting point of building simple, complex and enterprise applications. This skeleton comes with [Phing](https://www.phing.info) build script that can be used in Continous Integration tools like Jenkins or Travis.
 
 Installation using Composer
 ---------------------------
@@ -15,7 +13,7 @@ The easiest way to create a new ZF2 project is to use [Composer](https://getcomp
 
 Create your new ZF2 project:
 
-    composer create-project -n -sdev zendframework/skeleton-application path/to/install
+    composer create-project -n -sdev jakubigla/zf2-skeleton path/to/install
 
 
 
