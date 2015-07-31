@@ -37,6 +37,17 @@ If you don't have access to curl, then install Composer into your project as per
 Web server setup
 ----------------
 
+### Docker containers
+
+This skeleton comes with basic [script](docker-compose.yml), that is used by [docker-compose](https://docs.docker.com/compose/), to create a local and powerful development infrastructure. By default there is only one container enabled - [Apache 2.4, PHP 5.6 (FastCGI)](https://hub.docker.com/u/jakubigla/apache-php-dev), however this script comes with two others: MySQL and Jenkins containers. 
+
+I assume you are familiar with Docker and have already installed it (and boot2docker for OSX or Windows) together with Docker orchestration tool: docker-compose. Edit [script](docker-compose.yml) file to meet your requirments (don't forget about data volumes). Add valid entry to your ```/etc/hosts``` file (If you're on OSX or Windows, you can retrieve your VM IP by running: ```shell boot2dock ip```) Now you are ready to run:
+
+```shell 
+docker-compose up -d
+```
+If you're interested in my other Docker images visit [https://hub.docker.com/u/jakubigla/](https://hub.docker.com/u/jakubigla/).
+
 ### PHP CLI server
 
 The simplest way to get started if you are using PHP 5.4 or above is to start the internal PHP cli-server in the root
@@ -48,18 +59,6 @@ This will start the cli-server on port 8080, and bind it to all network
 interfaces.
 
 **Note:** The built-in CLI server is *for development only*.
-
-### Vagrant server
-
-This project supports a basic [Vagrant](http://docs.vagrantup.com/v2/getting-started/index.html) configuration with an inline shell provisioner to run the Skeleton Application in a [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
-
-1. Run vagrant up command
-
-    vagrant up
-
-2. Visit [http://localhost:8085](http://localhost:8085) in your browser
-
-Look in [Vagrantfile](Vagrantfile) for configuration details.
 
 ### Apache setup
 
