@@ -3,10 +3,10 @@ My Perfect ZF2 Skeleton
 
 Introduction
 ------------
-This is my own ZF2 skeleton application using the ZF2 MVC layer and module systems. Purpose of this is to provide a starting point of building simple, but also complex and enterprise applications. This skeleton comes with [Phing](https://www.phing.info) build script that can be used in Continous Integration tools like Jenkins or Travis.
+This is my own ZF2 skeleton application using the ZF2 MVC layer and module systems. Purpose of this is to provide a starting point of building simple, but also complex and enterprise applications. This skeleton comes with [Phing](https://www.phing.info) build script, that can be used in Continous Integration tools like Jenkins or Travis.
 
 ### QEngine modules
-Below are modules that support building applications in a "professional" way:
+Below are modules, that support building applications and point you to the PHP "best practices".
 * [qengine-base](https://github.com/jakubigla/qengine-base) - very early stage
 * [qengine-locale](https://github.com/jakubigla/qengine-locale)
 
