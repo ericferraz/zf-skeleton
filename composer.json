@@ -11,8 +11,8 @@
   "require": {
     "php": ">=5.5",
     "zendframework/zendframework": "~2.5",
-    "jakubigla/qengine-base": "~0.0",
-    "jakubigla/qengine-locale": "~0.0"
+    "qengine/qengine-base": "~0.0",
+    "qengine/qengine-locale": "~0.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "~2.3",

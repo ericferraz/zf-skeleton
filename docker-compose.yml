@@ -17,8 +17,8 @@ apachephp:
   image: jakubigla/apache-php-dev
   volumes:
    - ~/Projects/zf2-skeleton:/var/www/application
-  links:
-   - mysql
+#  links:
+#   - mysql
   ports:
    - "80:8080"
   environment:
