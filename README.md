@@ -7,8 +7,8 @@ This is my own ZF2 skeleton application using the ZF2 MVC layer and module syste
 
 ### QEngine modules
 Below are modules, that support building applications and point you to the PHP "best practices".
-* [qengine-base](https://github.com/jakubigla/qengine-base) - very early stage
-* [qengine-locale](https://github.com/jakubigla/qengine-locale)
+* [qengine/qengine-base](https://github.com/jakubigla/zf-base) - very early stage
+* [qengine/qengine-locale](https://github.com/jakubigla/zf-locale)
 
 Installation using Composer
 ---------------------------
@@ -18,7 +18,7 @@ The easiest way to create a new ZF2 project is to use [Composer](https://getcomp
 
 Create your new ZF2 project:
 
-    composer create-project -n -sdev jakubigla/zf2-skeleton path/to/install
+    composer create-project -n -sdev qengine/qengine-skeleton path/to/install
 
 
 
