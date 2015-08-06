@@ -18,7 +18,7 @@ class ApplicationTest extends AbstractHttpControllerTestCase
         parent::setUp();
     }
 
-    public function testDispatchHomePage()
+    public function testHomePageIsDispatchable()
     {
         $this->dispatch('/');
         $this->assertResponseStatusCode(200);

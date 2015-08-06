@@ -12,7 +12,7 @@
     </testsuites>
     <filter>
         <whitelist>
-            <directory suffix=".php">../module</directory>
+            <directory suffix=".php">../module/Application/src</directory>
         </whitelist>
         <blacklist>
             <directory>../test</directory>
