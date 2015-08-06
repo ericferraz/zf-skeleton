@@ -23,7 +23,7 @@
     "phpunit/phpunit": "~4.7",
     "mayflower/php-codebrowser": "~1.1",
     "phpdocumentor/phpdocumentor": "~2.8",
-    "se/selenium-server-standalone": "v2.46.0+p1",
+    "se/selenium-server-standalone": "2.46.0",
     "zendframework/zend-developer-tools": "dev-master"
   }
 }
