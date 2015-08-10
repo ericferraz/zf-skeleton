@@ -11,9 +11,11 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.5",
-    "zendframework/zendframework": "~2.5",
-    "qengine/qengine-base": "~0.0",
-    "qengine/qengine-locale": "~0.0"
+    "zendframework/zend-mvc": "~2.5",
+    "zendframework/zend-view": "~2.5",
+    "zendframework/zend-console": "~2.5",
+    "qengine/qengine-base": "~0.1",
+    "qengine/qengine-locale": "~0.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "~2.3",
