@@ -17,8 +17,6 @@ apachephp:
   image: jakubigla/apache-php-dev
   volumes:
    - ~/Projects/zf2-skeleton:/var/www/application
-   - ~/Projects/qengine:/var/www/qengine
-   - ~/Projects/zf2-skeleton/data/log:/var/log/application
 #  links:
 #   - mysql
   ports:

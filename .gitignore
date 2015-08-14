@@ -7,6 +7,7 @@ nbproject
 .idea
 .project
 .settings
+composer.lock
 vendor
 /build
 test/coverage-report
