@@ -1,28 +1,39 @@
-#mysql:
-#  image: mysql
-#  environment:
-#    MYSQL_ROOT_PASSWORD: password
-#    MYSQL_DATABASE: application
-#    MYSQL_USER: application
-#    MYSQL_PASSWORD: password
-#  tty: true
-#
-#jenkins:
-#  image: jakubigla/jenkins-php
-#  links:
-#     - mysql
-#  tty: true
-
-apachephp:
-  image: jakubigla/apache-php-dev
-  volumes:
-   - ~/Projects/zf2-skeleton:/var/www/application
-#  links:
-#   - mysql
+mysql:
+  image: mysql
   ports:
-   - "80:8080"
+   - "3306:3306"
   environment:
-    APPLICATION_NAME: "application"
-    APPLICATION_HOSTNAME: "application.dev"
+    MYSQL_ROOT_PASSWORD: password
+    MYSQL_DATABASE: application
+    MYSQL_USER: application
+    MYSQL_PASSWORD: password
+  tty: true
+  restart: always
+
+webdata:
+  image: jakubigla/web-data-only
+  volumes:
+   - "/Users/jakubigla/Projects/zf2-skeleton:/var/www/html"
+phpfpm:
+  image: jakubigla/php-fpm
+  links:
+   - mysql
+  volumes_from:
+   - "webdata"
+  tty: true
+  restart: always
+
+nginx:
+  image: jakubigla/nginx-dev
+  volumes_from:
+   - "webdata"
+  links:
+   - phpfpm
+  ports:
+   - "80:80"
+  environment:
+    APPLICATION_NAME: application
+    APPLICATION_HOSTNAME: application.dev
     APPLICATION_ENV: development
   tty: true
+  restart: always

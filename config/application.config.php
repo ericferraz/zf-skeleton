@@ -2,7 +2,9 @@
 
 use QEngine\Mvc\Application;
 
-$env     = getenv('APPLICATION_ENV') ?: Application::ENV_PRODUCTION;
+$env     = getenv('APPLICATION_ENV') ?: $_SERVER['APPLICATION_ENV'];
+$env     = $env                      ?: Application::ENV_PRODUCTION;
+
 $modules = file('config/modules.list', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 $appName = rtrim(file_get_contents('config/appname.txt'));
 
